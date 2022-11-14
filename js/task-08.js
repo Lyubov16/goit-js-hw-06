@@ -13,23 +13,23 @@ console.log(form);
 form.addEventListener('submit', onFormSubmit);
 
 function onFormSubmit(event) {
-    event.preventDefault();
-//     const formEll = event.currentTarget.elements;
-//     // console.dir(formEll);
-//     const elements = {};
-//     elements.email = formEll.email.value;
-//     elements.password = formEll.password.value;
+        event.preventDefault();
+    //     const formEll = event.currentTarget.elements;
+    //     // console.dir(formEll);
+    //     const elements = {};
+    //     elements.email = formEll.email.value;
+    //     elements.password = formEll.password.value;
 
-// if (elements.email  === '' || elements.password === '') {
-//     return alert('Всі поля мають бути заповнені!')
-// }
-//     console.log(elements);
-//     event.currentTarget.reset();
+    // if (elements.email  === '' || elements.password === '') {
+    //     return alert('Всі поля мають бути заповнені!')
+    // }
+    //     console.log(elements);
+    //     event.currentTarget.reset();
 
-const {email, password} = event.currentTarget.elements;
-if (email.value === '' || password.value === '') {
-    return alert('Всі поля мають бути заповнені!')
-}
-    console.log(`Login: ${email.value}, Password: ${password.value}`);
+    const { email, password } = event.currentTarget.elements;
+    if (email.value === '' || password.value === '') {
+        return alert('Всі поля мають бути заповнені!')
+    }
+    console.log({ Email: email.value, Password: password.value});
     event.currentTarget.reset();
 };
